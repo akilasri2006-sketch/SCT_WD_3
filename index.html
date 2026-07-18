@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tricta — Tic-Tac-Toe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="app">
+
+    <header class="header">
+      <div class="eyebrow">Task 03 · SkillCraft Technology</div>
+      <h1>Tricta</h1>
+      <p class="subtitle">A tic-tac-toe, sharpened.</p>
+    </header>
+
+    <section class="mode-switch" role="tablist" aria-label="Game mode">
+      <button class="mode-btn active" id="modePvp" role="tab" aria-selected="true">2 Players</button>
+      <button class="mode-btn" id="modeCpu" role="tab" aria-selected="false">Vs Computer</button>
+    </section>
+
+    <section class="glass-card">
+
+      <div class="scoreboard">
+        <div class="score-cell player-x" id="scoreCellX">
+          <span class="score-label">Player X</span>
+          <span class="score-value" id="scoreX">0</span>
+        </div>
+        <div class="score-cell draws">
+          <span class="score-label">Draws</span>
+          <span class="score-value" id="scoreDraw">0</span>
+        </div>
+        <div class="score-cell player-o" id="scoreCellO">
+          <span class="score-label" id="labelO">Player O</span>
+          <span class="score-value" id="scoreO">0</span>
+        </div>
+      </div>
+
+      <div class="turn-indicator" id="turnIndicator">
+        <span class="turn-dot"></span>
+        <span id="turnText">X's turn</span>
+      </div>
+
+      <div class="board-wrap">
+        <svg class="win-line" id="winLine" viewBox="0 0 300 300" preserveAspectRatio="none">
+          <line id="winLineEl" x1="0" y1="0" x2="0" y2="0" />
+        </svg>
+        <div class="board" id="board">
+          <button class="cell" data-index="0" aria-label="cell 1"></button>
+          <button class="cell" data-index="1" aria-label="cell 2"></button>
+          <button class="cell" data-index="2" aria-label="cell 3"></button>
+          <button class="cell" data-index="3" aria-label="cell 4"></button>
+          <button class="cell" data-index="4" aria-label="cell 5"></button>
+          <button class="cell" data-index="5" aria-label="cell 6"></button>
+          <button class="cell" data-index="6" aria-label="cell 7"></button>
+          <button class="cell" data-index="7" aria-label="cell 8"></button>
+          <button class="cell" data-index="8" aria-label="cell 9"></button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" id="newRoundBtn">New Round</button>
+        <button class="btn-ghost" id="resetAllBtn">Reset Match</button>
+      </div>
+
+    </section>
+
+    <footer>Built for SkillCraft Technology Internship — Task 03</footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
